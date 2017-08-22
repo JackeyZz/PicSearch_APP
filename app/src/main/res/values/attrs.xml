@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bottomBarSize" format="dimension"/>
+
+    <declare-styleable name="CommonToolBar">
+        <attr name="drawerBtnVisible" format="boolean"/>
+        <attr name="backBtnVisible" format="boolean" />
+        <attr name="backBtnSrc" format="string|reference"/>
+        <attr name="backBtnText" format="string"/>
+
+        <attr name="toolBarTitle" format="string|reference"/>
+
+
+        <attr name="overflowBtnVisible" format="boolean" />
+        <attr name="overflowBtnSrc" format="string|reference"/>
+        <attr name="overflowBtnText" format="string"/>
+    </declare-styleable>
+</resources>

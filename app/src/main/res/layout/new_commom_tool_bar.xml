@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="#6a5acd">
+
+    <LinearLayout
+        android:id="@+id/left_click_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/clickable_transparent_bg"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/drawer_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_drawer" />
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrow_left"/>
+
+        <TextView
+            android:id="@+id/text_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/common_tool_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标题"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:minWidth="45dp"
+        android:orientation="horizontal">
+
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="25dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_height="25dp"
+            wheel:matProg_barColor="@color/white"
+            wheel:matProg_barWidth="1dp"
+            wheel:matProg_progressIndeterminate="true" />
+
+
+        <LinearLayout
+            android:id="@+id/right_click_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/clickable_transparent_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/text_overflow_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="发布"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/overflow_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="#8e8e8e" />
+
+</RelativeLayout>

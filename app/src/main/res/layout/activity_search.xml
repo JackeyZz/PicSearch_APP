@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <com.example.wang.zzj.widget.CommonToolBar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:backBtnVisible="true"
+            app:toolBarTitle="图像检索系统">
+        </com.example.wang.zzj.widget.CommonToolBar>
+
+
+        <ImageView
+            android:id="@+id/select_img"
+            android:layout_width="match_parent"
+            android:layout_height="216dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择检索方式:"
+            android:textColor="@color/dark_gray"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/search_methods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/color_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="颜色（HSV）" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/texture_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="局部（sift）" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/shape_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="形状（Hu不变矩）" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/shape1_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="纹理（LBP）" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/color_texture_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="颜色+局部" />
+
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_clickable_bg"
+                android:onClick="startClick"
+                android:text="开始检索"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/loading"/>
+
+
+
+</android.support.v7.widget.FitWindowsFrameLayout>
